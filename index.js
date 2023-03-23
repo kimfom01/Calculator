@@ -1,5 +1,9 @@
 "use strict";
 
+let num1;
+let num2;
+let operator;
+
 const add = (num1, num2) => num1 + num2;
 
 const subtract = (num1, num2) => num1 - num2;
