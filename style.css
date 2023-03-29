@@ -118,3 +118,19 @@ button {
         width: 95px;
     }
 }
+
+@media (min-width: 280px) {
+    #display {
+        padding: 20px 10px 10px 0;
+    }
+
+    button {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+    }
+
+    #zero {
+        width: 75px;
+    }
+}
