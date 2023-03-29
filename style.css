@@ -27,13 +27,16 @@ h1 {
     padding: 20px;
 }
 
-#output {
+#display {
     padding: 50px 10px 10px 0;
     border: 10px;
     text-align: end;
     background-color: grey;
     border-radius: 15px;
     margin-bottom: 10px;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
 }
 
 button {
