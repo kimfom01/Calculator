@@ -2,6 +2,13 @@ html {
     font-size: 24px;
 }
 
+@media (min-width: 768px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+
 body {
     width: 80%;
     margin: 0 auto;
@@ -66,4 +73,48 @@ button {
 .right button {
     background-color: orange;
     color: white;
+}
+
+@media (min-width: 425px) {
+    button {
+        height: 60px;
+        width: 60px;
+        font-size: 24px;
+    }
+
+    #zero {
+        width: 135px;
+    }
+}
+
+@media (min-width: 375px) {
+    #display {
+        padding: 40px 10px 10px 0;
+    }
+
+    button {
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+    }
+
+    #zero {
+        width: 115px;
+    }
+}
+
+@media (min-width: 320px) {
+    #display {
+        padding: 30px 10px 10px 0;
+    }
+
+    button {
+        height: 40px;
+        width: 40px;
+        font-size: 18px;
+    }
+
+    #zero {
+        width: 95px;
+    }
 }
