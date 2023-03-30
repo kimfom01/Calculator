@@ -20,3 +20,15 @@ const divide = (num1, num2) => {
 const operate = (num1, num2, operator) => {
     return operator(num1, num2);
 }
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach(btn => btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const val = e.target.innerText;
+
+    const display = document.getElementById("display");
+
+    display.innerText += val;
+}));

@@ -29,6 +29,7 @@ h1 {
 }
 
 #display {
+    height: 40px;
     padding: 50px 10px 10px 0;
     border: 10px;
     text-align: end;
@@ -53,6 +54,7 @@ button {
 
 .buttons {
     display: flex;
+    text-decoration: none;
 }
 
 .right {
