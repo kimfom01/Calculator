@@ -27,6 +27,8 @@ const roundUp = (output) => {
     return output.toFixed(6);
 }
 
+// TODO: Implement the +/- sign switching, the rounding up for long decimal output, and prevent user from entering multiple . in one go as in 9.4.35.2
+
 const numbers = document.querySelectorAll(".numbers");
 const display = document.getElementById("display");
 
