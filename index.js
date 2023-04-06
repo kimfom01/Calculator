@@ -104,12 +104,23 @@ operations.forEach(btn => btn.addEventListener("click", (e) => {
         case "equals":
             num2 = parseFloat(display.innerText);
             display.innerText = ""
-            display.innerText = operate(num1, num2, operator);
+            result = operate(num1, num2, operator);
+            if(result.toString().length > 7)
+            {
+                result = result.toFixed(7);
+            }
+
+            display.innerText = result;
             break;
         default:
             console.error("this shouldn't happen");
     }
 }));
+
+if(result.toString().length > 7)
+{
+    result = result.toFixed(7);
+}
 
 display.innerText = result;
 
