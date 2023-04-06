@@ -27,7 +27,7 @@ const roundUp = (output) => {
     return output.toFixed(6);
 }
 
-// TODO: Implement the +/- sign switching, the rounding up for long decimal output, and prevent user from entering multiple . in one go as in 9.4.35.2
+// TODO: Prevent user from entering multiple . in one go as in 9.4.35.2
 
 const numbers = document.querySelectorAll(".numbers");
 const display = document.getElementById("display");
@@ -105,8 +105,7 @@ operations.forEach(btn => btn.addEventListener("click", (e) => {
             num2 = parseFloat(display.innerText);
             display.innerText = ""
             result = operate(num1, num2, operator);
-            if(result.toString().length > 7)
-            {
+            if (result.toString().length > 7) {
                 result = result.toFixed(7);
             }
 
@@ -117,8 +116,7 @@ operations.forEach(btn => btn.addEventListener("click", (e) => {
     }
 }));
 
-if(result.toString().length > 7)
-{
+if (result.toString().length > 7) {
     result = result.toFixed(7);
 }
 
@@ -137,3 +135,14 @@ const percentage = document.getElementById("percentage");
 percentage.addEventListener("click", () => {
     display.innerText = parseFloat(display.innerText) / 100;
 })
+
+const sign = document.getElementById("sign");
+
+sign.addEventListener("click", () => {
+    if (display.innerText[0] === "-") {
+        display.innerText = display.innerText.slice(1);
+    }
+    else {
+        display.innerText = "-" + display.innerText;
+    }
+});
