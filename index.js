@@ -23,14 +23,27 @@ const operate = (num1, num2, operator) => {
     return operator(num1, num2);
 }
 
-const roundUp = (output) => {
-    return output.toFixed(6);
-}
-
-// TODO: Prevent user from entering multiple . in one go as in 9.4.35.2
-
 const numbers = document.querySelectorAll(".numbers");
 const display = document.getElementById("display");
+
+const observer = new MutationObserver((mutationList) => {
+    for (const mutation of mutationList) {
+        if (mutation.type === "childList") {
+            const decimal = document.getElementById("decimal");
+
+            if (display.innerText.includes(".")) {
+                decimal.disabled = true;
+            }
+            else {
+                decimal.disabled = false;
+            }
+        }
+    }
+});
+
+const config = { attributes: true, childList: true, subtree: true };
+
+observer.observe(display, config);
 
 numbers.forEach(btn => btn.addEventListener("click", (e) => {
     e.preventDefault();
